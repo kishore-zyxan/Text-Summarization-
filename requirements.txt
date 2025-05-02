@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+langchain
+langchain-groq
+python-dotenv
+pdfplumber
+python-docx
+pytesseract
+pandas
+Pillow
+python-multipart
+groq
+PyPDF2
+transformers
+httpx
