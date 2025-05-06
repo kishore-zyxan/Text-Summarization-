@@ -1,10 +1,9 @@
 from langchain_core.prompts import PromptTemplate
 
-# For map step: Initial summarization of each chunk
 map_prompt = PromptTemplate(
     input_variables=["text"],
     template="""
-You are an expert assistant. Read the following content and write a concise, clear, and informative summary of it.
+You will be provided with a section of a document. Please summarize it concisely.
 
 Content:
 {text}
@@ -13,20 +12,17 @@ Summary:
 """
 )
 
-# For reduce step: Final combination and polishing of the summary
 combine_prompt = PromptTemplate(
     input_variables=["text"],
     template="""
-You are a helpful assistant. Based on the following partial summaries, generate a complete, structured summary of the original content.
+Below is a collection of summaries. Combine them into a final summary with:
+- A catchy title
+- A brief introduction
+- A list of key points in a numbered format
 
-- Begin with a suitable title for the content.
-- Follow with a brief introduction.
-- Present the key points as a numbered list.
-- Make sure the summary is contextually accurate and concise.
-
-Partial Summaries:
+Summaries:
 {text}
 
-Final Structured Summary:
+Final Summary:
 """
 )

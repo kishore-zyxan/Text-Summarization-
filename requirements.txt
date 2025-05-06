@@ -2,6 +2,7 @@ fastapi
 uvicorn
 langchain
 langchain-groq
+langchain-core
 python-dotenv
 pdfplumber
 python-docx
@@ -13,3 +14,11 @@ groq
 PyPDF2
 transformers
 httpx
+faiss-cpu
+sentence-transformers
+openai
+pypdf
+easyocr
+tiktoken
+tenacity
+pdf2image
